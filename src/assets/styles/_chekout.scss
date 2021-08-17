@@ -1,0 +1,201 @@
+.check-card {
+    width: 100% !important;
+    height: 100%;
+    position: relative;
+    border: 1px solid rgb(240, 240, 240);
+    background-color: rgb(250, 250, 250);
+    border-radius: 5px;
+    padding: 11px 15px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    .title {
+        font-size: 13px;
+        font-weight: 500;
+        display: block;
+    }
+
+    .text {
+        padding-top: 10px;
+        font-weight: 300;
+        font-size: 15px;
+        display: block;
+    }
+}
+
+.card-active {
+    border: 1px solid $purple !important;
+    background-color: white !important;
+    transition: all 0.2s linear;
+
+}
+
+.check-card:hover .edit-delete {
+    display: block!important;
+    transition: all 0.2s ease-in-out 0;
+}
+
+.input-cheked {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.edit-delete {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+    transition: all 0.2s ease-in-out 0;
+}
+
+
+.check-plastic-card {
+    width: 100% !important;
+    height: 100%;
+    position: relative;
+    border: 1px solid rgb(228, 244, 252);
+    background-color: rgb(228, 244, 252);
+    border-radius: 5px;
+    padding: 11px 13px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+
+    .title {
+        font-size: 18px;
+        font-weight: 500;
+        display: block;
+    }
+
+    .card-number {
+        padding-top: 15px;
+        font-size: 10px;
+        display: block;
+    }
+
+    .number {
+        padding-top: 10px;
+        font-weight: 500;
+        font-size: 15px;
+        display: block;
+    }
+
+    .name {
+        padding-top: 10px;
+        font-weight: 500;
+        font-size: 15px;
+        display: block;
+        color: $purple;
+    }
+}
+
+.plastic-card-active {
+    border: 1px solid $purple !important;
+    transition: all 0.2s linear;
+}
+
+.check-plastic-card:hover .edit-delete {
+    display: block!important;
+    transition: all 0.2s ease-in-out 0;
+}
+
+.add-address-modal {
+    background-color: $white;
+    border-radius: 0.25rem;
+    width: 100%;
+
+    .modal-header {
+        height: 70px;
+        width: 100%;
+        background-color: $purple;
+        color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px;
+        z-index: 200;
+    }
+
+    .modal-body {
+        padding: 30px;
+    }
+
+    @media only screen and (max-width: 576px) {
+        .modal-input {
+            width: 100% !important;
+        }
+    }
+
+    @media only screen and (min-width: 576px) {
+        .modal-input {
+            width: 300px;
+        }
+    }
+    
+}
+
+.box-shadow {
+    box-shadow: 0px 2px 16px 0px rgb(180, 180, 180);
+}
+
+.border-danger {
+    border: 1px solid red;
+    box-shadow: 0px 2px 16px 0px rgb(250, 200, 200);
+}
+
+.row {
+    .flex-top {
+        order: 0;
+        color: black !important;
+    }
+
+    .flex-bottom {
+        order: 1;
+    }
+
+    @media only screen and (min-width: 992px) {
+        .flex-top {
+            order: 1;
+            color: #9c9fa6 !important;
+        }
+    
+        .flex-bottom {
+            order: 0;
+        }
+    }
+}
+
+
+.details {
+    flex-basis: 210px;
+    max-width: 210px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.after-two-points::after {
+    content: ":";
+    position: absolute;
+    top: 4px;
+    right: -2px;
+    line-height: 1;
+}
+
+.border-md-right {
+    border-right: 1px solid gray;
+}
+
+@media only screen and (max-width: 768px) {
+    .details {
+        flex-basis: 105px;
+        max-width: 105px;
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    .border-md-right {
+        border-right: 0;
+    }
+}

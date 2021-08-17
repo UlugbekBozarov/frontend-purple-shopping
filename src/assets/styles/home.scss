@@ -1,0 +1,64 @@
+.item-fixed {
+	width: 90px;
+	height: 100px;
+	position: fixed;
+	top: 40%;
+	right: 0;
+	z-index: 1;
+	padding: 3px;
+	font-family: 'Bahnschrift SemiCondensed';
+}
+
+.items-border {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.price-radius {
+	border-radius: 5px;
+}
+
+.h-item-price {
+	height: 50%;
+}
+
+
+@media screen and (max-width: 576px) {
+    .item-fixed {
+    	font-size: 18px;
+		width: 100%;
+		height: 50px;
+		position: fixed;
+		top: 90%;
+		z-index: 1;
+		padding-left: 20px;
+		padding-right: 20px;
+		font-family: 'Bahnschrift SemiCondensed';
+	}
+	
+	.items-border {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-radius: 25px;
+	}
+	
+	.price-radius {
+		height: 36px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 25px;
+	}
+
+	.h-item-price {
+		height: 100%;
+	}
+}
+
+.item-rounded {
+	width: 100px;
+	height: 36px;
+	border: 1px solid rgb(240, 240, 240);
+	border-radius: 18px;
+}

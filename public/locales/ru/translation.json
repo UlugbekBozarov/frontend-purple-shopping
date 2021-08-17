@@ -1,0 +1,9 @@
+{
+    "Navbar": {
+        "Home": "Дома",
+        "Services": "Сервис",
+        "About": "Обо мне",
+        "Portfolio": "Портфолио",
+        "Contact": "Контакт"
+    } 
+}
