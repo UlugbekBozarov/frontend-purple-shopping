@@ -20,9 +20,9 @@ const App = () => {
 
   const [tokenBool, setTokenBool] = useState(false);
   const [roleBool, setRoleBool] = useState(false);
-  const [aboutMySelf, setAboutMySelf] = useState();
+  const [aboutMySelf, setAboutMySelf] = useState({});
 
-  const authorization = localStorage.getItem("Online-Shopping Authorization") !== null;
+  // const authorization = localStorage.getItem("Online-Shopping Authorization") !== null;
   const role = localStorage.getItem("Online-Shopping User-Role") !== null;
 
 
@@ -31,8 +31,28 @@ const App = () => {
     onRouteChanged(currentPath);
   }, [location.pathname]);
 
-  
-  
+  useEffect(() => {
+    axios.get(
+      "/user/me",
+      {
+        headers: {
+          Authorization: localStorage.getItem("Online-Shopping Authorization")
+        }
+      }
+    ).then(res => {
+      if (res.status === 200) {
+        setTokenBool(true);
+        if (localStorage.getItem("Online-Shopping User-Role") === "ROLE_ADMIN") {
+          setRoleBool(true);
+        }
+        setAboutMySelf(res.data)
+      }
+      
+    }).catch(err => {
+      console.log("Err: " + err)
+    })
+  }, [])
+
 
 
   let navbarComponent = !isFullPageLayout ? <Navbar authentification={tokenBool} role={roleBool} about={aboutMySelf} rightSidebarBool={true} /> : '';
@@ -67,7 +87,7 @@ const App = () => {
 
   return (
     <div className="container-scroller">
-      { navbarComponent}
+      {navbarComponent}
       {conditionNavbarComponent}
       <div className="container-fluid page-body-wrapper">
         {sidebarComponent}

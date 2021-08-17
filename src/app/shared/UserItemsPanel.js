@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 
 const UserItemsPanel = () => {
@@ -6,14 +6,6 @@ const UserItemsPanel = () => {
     const closeRightSidebar = () => {
         document.getElementById('user-items-panel').classList.remove('open');
     }
-
-    useEffect(() => {
-        let items = [];
-        if (localStorage.getItem("Product-Item") !== null) {
-            let json = localStorage.getItem("Product-Item");
-            items = JSON.parse(json);
-        }
-    }, [localStorage.getItem("Product-Item")]);
 
 
 

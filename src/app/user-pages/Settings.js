@@ -6,9 +6,6 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 
-// import { Form } from 'react-bootstrap';
-
-
 const Settings = () => {
 
     const [AddAddressModal, openAddAddress, closeAddAddress] = useModal('root', {
@@ -585,8 +582,6 @@ const Settings = () => {
     const renderAddress = () => {
 
         return addressMass.map(a => {
-
-            let m = a.address_id;
 
             return (
                 <div className="col-12 col-sm-6 col-md-4 col-lg-3 p-2">
